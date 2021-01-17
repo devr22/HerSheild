@@ -33,11 +33,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.project.womensecurityapp.User_login_info.Account_setup;
 
 import org.security.hershield.MapActivity;
 import org.security.hershield.R;
 import org.security.hershield.SMS.SMS;
+import org.security.hershield.User_login_info.Account_setup;
 import org.security.hershield.action_screen;
 import org.security.hershield.model.Trusted_person_model;
 import org.security.hershield.model.User_residential_details;
@@ -93,19 +93,16 @@ public class HomeFragment extends Fragment {
         });
 
         ToggleButton recodingButton = root.findViewById(R.id.RecordingToggleButton);
-        recodingButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        recodingButton.setOnCheckedChangeListener((compoundButton, b) -> {
 
-                if (b) {
-                    if (checkPermissionFromDevice()) {
-                        startRecording();
-                    } else {
-                        requestAudioPermission();
-                    }
+            if (b) {
+                if (checkPermissionFromDevice()) {
+                    startRecording();
                 } else {
-                    stopRecording();
+                    requestAudioPermission();
                 }
+            } else {
+                stopRecording();
             }
         });
 

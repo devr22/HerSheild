@@ -28,10 +28,10 @@ import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.project.womensecurityapp.model.location_model;
 
 import org.security.hershield.Notification.notification_generator;
 import org.security.hershield.Report.ModelReport;
+import org.security.hershield.model.location_model;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -193,7 +193,7 @@ public class BackgroundLocationService_Girls extends Service {
             oldMinute = currentMinute;
 
             ModelReport modelReport = new ModelReport();
-            SimpleDateFormat simpleDateFormat2 = new SimpleDateFormat("hh:mm:ss");
+            @SuppressLint("SimpleDateFormat") SimpleDateFormat simpleDateFormat2 = new SimpleDateFormat("hh:mm:ss");
             String time = simpleDateFormat2.format(calendar.getTime());
             modelReport.setTime(time);
             modelReport.setLatitude(String.valueOf(currentLocation.getLatitude()));
@@ -203,7 +203,7 @@ public class BackgroundLocationService_Girls extends Service {
 
                 databaseReference_report.push().setValue(modelReport);
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
         }
     }

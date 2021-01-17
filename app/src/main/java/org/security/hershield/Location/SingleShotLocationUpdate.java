@@ -39,19 +39,17 @@ public class SingleShotLocationUpdate extends AppCompatActivity implements Locat
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case REQUEST_FINE_LOCATION:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Log.d("gps", "Location permission granted");
-                    try {
-                        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-                        locationManager.requestLocationUpdates("gps", 0, 0, this);
-                    } catch (SecurityException ex) {
-                        Log.d("gps", "Location permission did not work!");
-                    }
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == REQUEST_FINE_LOCATION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.d("gps", "Location permission granted");
+                try {
+                    locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                    locationManager.requestLocationUpdates("gps", 0, 0, this);
+                } catch (SecurityException ex) {
+                    Log.d("gps", "Location permission did not work!");
                 }
-                break;
+            }
         }
     }
 }

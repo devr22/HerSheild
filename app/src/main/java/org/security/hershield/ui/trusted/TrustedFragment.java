@@ -22,9 +22,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.project.womensecurityapp.User_login_info.Trusted_person;;
 
 import org.security.hershield.R;
+import org.security.hershield.User_login_info.Trusted_person;
 import org.security.hershield.model.Trusted_person_model;
 
 import java.util.ArrayList;

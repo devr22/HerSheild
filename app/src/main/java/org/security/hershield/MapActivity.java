@@ -93,12 +93,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         gps_icon = findViewById(R.id.map_gps_icon);
 
-        gps_icon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getDeviceLocation();
-            }
-        });
+        gps_icon.setOnClickListener(view -> getDeviceLocation());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
         });
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestIdToken("757561110547-v46aga8t1bihlhrakmem8smq89luv9k7.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
 
