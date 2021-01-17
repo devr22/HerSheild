@@ -9,9 +9,7 @@ the App will generate a special notification for those who are near to the woman
 
 2. **Personal Info:** Enter name, contact number, house number, street name and city.
 
-<img src="https://drive.google.com/file/d/1GPG_MzrcN4mVLFTAmq0O9xfi-glYPS2k/view?usp=sharing" width="200" height ="400">
-
-<a href="https://drive.google.com/uc?export=view&id=1GPG_MzrcN4mVLFTAmq0O9xfi-glYPS2k"><img src="https://drive.google.com/uc?export=view&id=1GPG_MzrcN4mVLFTAmq0O9xfi-glYPS2k" style="width: 200px; max-width: 100%; height: 400px"/>
+<a href="https://drive.google.com/uc?export=view&id=1GPG_MzrcN4mVLFTAmq0O9xfi-glYPS2k"><img src="https://drive.google.com/uc?export=view&id=1GPG_MzrcN4mVLFTAmq0O9xfi-glYPS2k" width="200" height ="400" /> </a>
 
 3. **Login:** Login using email and password or directly sign in using “Google Sign In” feature.
 
