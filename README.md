@@ -9,7 +9,7 @@ the App will generate a special notification for those who are near to the woman
 
 2. **Personal Info:** Enter name, contact number, house number, street name and city.
 
-<a href="https://drive.google.com/uc?export=view&id=1GPG_MzrcN4mVLFTAmq0O9xfi-glYPS2k"><img src="https://drive.google.com/uc?export=view&id=1GPG_MzrcN4mVLFTAmq0O9xfi-glYPS2k" width="200" height ="400" /> </a>
+<a href="https://drive.google.com/uc?export=view&id=1bxVj9eNj4wJRxY8aSBj_kcMX_hXRhNLO"><img src="https://drive.google.com/uc?export=view&id=1bxVj9eNj4wJRxY8aSBj_kcMX_hXRhNLO" width="200" height ="400" /> </a>  <a href="https://drive.google.com/uc?export=view&id=1GPG_MzrcN4mVLFTAmq0O9xfi-glYPS2k"><img src="https://drive.google.com/uc?export=view&id=1GPG_MzrcN4mVLFTAmq0O9xfi-glYPS2k" width="200" height ="400" /> </a>
 
 3. **Login:** Login using email and password or directly sign in using “Google Sign In” feature.
 
@@ -45,6 +45,31 @@ the App will generate a special notification for those who are near to the woman
 8. **Trusted Person Page:**  See the list of all trusted persons added by you.
 
 9. **Trusted Person Details:** Enter name, contact, email, address and relation and then click on the add person button to add a new trusted person in your list.
+
+## Clone and Build Project
+* Run Android Studio and Click on **Get from Version Control**
+* Select Git and Paste Url of the repo and then clone the project
+* The android studio will automatically download and configure all the required dependencies.\
+***Make sure you have active internet connection, otherwise you may get several errors.***
+
+## Technologies
+
+* [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/): A cross-platform messaging solution. We used it to share location data between the users.
+* [Firebase Realtime_Database](https://firebase.google.com/docs/database/): Realtime Cloud database provided by Firebase to be used by various users simultaneously. We used it to store the profile of the users and also making the connections between different users taking place.
+* [Firebase Authentication](https://firebase.google.com/docs/auth/): Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to our app. We used Phone Provider to validate user Phone with OTP. 
+* [Google Maps Platform](https://cloud.google.com/maps-platform/): For the maps interface
+* [Retrofit](https://square.github.io/retrofit/): A type-safe HTTP client for Android and Java
+
+## Build With
+
+* Android Studio
+* Java
+
+## Authors
+
+* <a href="https://www.linkedin.com/in/rahul-dev-762b95179/"> **Rahul Dev** </a> 
+* <a href="https://www.linkedin.com/in/ankit-kumar-52777662/"> **Ankit Kumar** </a>
+* <a href="https://www.linkedin.com/in/medhavi-srivastava-77976b16a/">  **Medhavi Srivastava** </a>
 
 
 
