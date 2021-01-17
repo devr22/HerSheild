@@ -33,25 +33,26 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.project.womensecurityapp.MapActivity;
-import com.project.womensecurityapp.R;
-import com.project.womensecurityapp.SMS.SMS;
 import com.project.womensecurityapp.User_login_info.Account_setup;
-import com.project.womensecurityapp.action_screen;
-import com.project.womensecurityapp.model.Trusted_person_model;
-import com.project.womensecurityapp.model.User_residential_details;
-import com.project.womensecurityapp.model.location_model;
-import com.project.womensecurityapp.model.person_details;
-import com.project.womensecurityapp.model.person_info;
-import com.project.womensecurityapp.services.foreground_service;
+
+import org.security.hershield.MapActivity;
+import org.security.hershield.R;
+import org.security.hershield.SMS.SMS;
+import org.security.hershield.action_screen;
+import org.security.hershield.model.Trusted_person_model;
+import org.security.hershield.model.User_residential_details;
+import org.security.hershield.model.location_model;
+import org.security.hershield.model.person_details;
+import org.security.hershield.model.person_info;
+import org.security.hershield.services.foreground_service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.UUID;
 
-import static com.project.womensecurityapp.MainActivity.editor;
-import static com.project.womensecurityapp.MainActivity.preferences;
+import static org.security.hershield.MainActivity.editor;
+import static org.security.hershield.MainActivity.preferences;
 
 public class HomeFragment extends Fragment {
 

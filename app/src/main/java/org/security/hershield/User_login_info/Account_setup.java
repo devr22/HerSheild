@@ -1,4 +1,4 @@
-package com.project.womensecurityapp.User_login_info;
+package org.security.hershield.User_login_info;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,9 +17,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.project.womensecurityapp.Main2Activity;
-import com.project.womensecurityapp.R;
-import com.project.womensecurityapp.model.User_residential_details;
+
+import org.security.hershield.Main2Activity;
+import org.security.hershield.R;
+import org.security.hershield.model.User_residential_details;
 
 public class Account_setup extends AppCompatActivity {
 

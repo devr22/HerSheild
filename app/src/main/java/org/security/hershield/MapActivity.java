@@ -41,7 +41,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.maps.GeoApiContext;
 
+import org.security.hershield.Location.BackgroundLocationService;
+import org.security.hershield.adapter.trusted_person_adapter;
+import org.security.hershield.model.Trusted_person_model;
+import org.security.hershield.model.User_residential_details;
+import org.security.hershield.model.location_model;
+
 import java.util.ArrayList;
+
+import static org.security.hershield.MainActivity.preferences;
 
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
@@ -165,7 +173,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         Log.d(TAG, "initMap: initialising map");
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 
-        mapFragment.getMapAsync(com.project.womensecurityapp.MapActivity.this);
+        mapFragment.getMapAsync(MapActivity.this);
     }
 
     @Override
@@ -221,7 +229,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
                     } else {
                         Log.d(TAG, "onComplete: Current Location is not found");
-                        Toast.makeText(com.project.womensecurityapp.MapActivity.this, "Unable to find device's current location", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MapActivity.this, "Unable to find device's current location", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -290,7 +298,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
 
-                com.project.womensecurityapp.MapActivity.this.startForegroundService(serviceIntent);
+                MapActivity.this.startForegroundService(serviceIntent);
             } else {
                 startService(serviceIntent);
             }

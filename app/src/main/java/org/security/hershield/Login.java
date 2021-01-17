@@ -112,7 +112,7 @@ public class Login extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), FirebaseAuth.getInstance().getCurrentUser().getEmail().toString(), Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
                             //Toast.makeText(getApplicationContext(),"Registered Successfully",Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(com.project.womensecurityapp.Login.this, Main2Activity.class);
+                            Intent i = new Intent(Login.this, Main2Activity.class);
                             startActivity(i);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -141,7 +141,7 @@ public class Login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             btn.setText("Logging in");
                             Toast.makeText(getApplicationContext(), "Logging you in", Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(com.project.womensecurityapp.Login.this, Main2Activity.class);
+                            Intent i = new Intent(Login.this, Main2Activity.class);
                             startActivity(i);
 
                         } else {
@@ -149,25 +149,6 @@ public class Login extends AppCompatActivity {
                             btn.stopAnimation();
                             btn.revertAnimation();
                             google.setEnabled(true);
-
-                           /* btn.revertAnimation(new OnAnimationEndListener() {
-                                @Override
-                                public void onAnimationEnd() {
-                                    btn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.color.quantum_pink));
-                                }
-                            });*/
-                           /* Snackbar snackbar=Snackbar.make(linear,"Try Again!",Snackbar.LENGTH_LONG).setAction("Retry", new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    id.getEditText().setText("");
-                                    password.getEditText().setText("");
-
-
-                                }
-                            });
-                            snackbar.setActionTextColor(Color.RED);
-                            View sbView = snackbar.getView();*/
-
 
                         }
                     }

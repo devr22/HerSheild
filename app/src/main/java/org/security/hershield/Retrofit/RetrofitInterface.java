@@ -1,5 +1,7 @@
 package org.security.hershield.Retrofit;
 
+import org.security.hershield.model.RetrofitModel.PlaceResult;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

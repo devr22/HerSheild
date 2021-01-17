@@ -35,14 +35,16 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.project.womensecurityapp.User_login_info.Account_setup;
-import com.project.womensecurityapp.model.User_residential_details;
-import com.project.womensecurityapp.model.location_model;
-import com.project.womensecurityapp.model.person_details;
-import com.project.womensecurityapp.model.person_info;
 
-import static com.project.womensecurityapp.MainActivity.editor;
-import static com.project.womensecurityapp.MainActivity.preferences;
+import org.security.hershield.User_login_info.Account_setup;
+import org.security.hershield.User_login_info.Signup;
+import org.security.hershield.model.User_residential_details;
+import org.security.hershield.model.location_model;
+import org.security.hershield.model.person_details;
+import org.security.hershield.model.person_info;
+
+import static org.security.hershield.MainActivity.editor;
+import static org.security.hershield.MainActivity.preferences;
 
 
 public class Main2Activity extends AppCompatActivity {
@@ -164,7 +166,7 @@ public class Main2Activity extends AppCompatActivity {
                                 t = dataSnapshot.getValue(User_residential_details.class);
                             else {
                                 status = "false";
-                                Intent i = new Intent(com.project.womensecurityapp.Main2Activity.this, Account_setup.class);
+                                Intent i = new Intent(Main2Activity.this, Account_setup.class);
                                 startActivity(i);
                                 Toast.makeText(getApplicationContext(), "Not set", Toast.LENGTH_SHORT).show();
                             }
@@ -242,13 +244,13 @@ public class Main2Activity extends AppCompatActivity {
         final Button goto_ = dialog.findViewById(R.id.goto_id);
 
         login.setOnClickListener(v -> {
-            Intent i = new Intent(com.project.womensecurityapp.Main2Activity.this, Login.class);
+            Intent i = new Intent(Main2Activity.this, Login.class);
             startActivity(i);
 
         });
 
         Signup.setOnClickListener(v -> {
-            Intent i = new Intent(com.project.womensecurityapp.Main2Activity.this, com.project.womensecurityapp.User_login_info.Signup.class);
+            Intent i = new Intent(Main2Activity.this, org.security.hershield.User_login_info.Signup.class);
             startActivity(i);
 
             if (!preferences.getString("active", "no").equals("no")) {
@@ -275,7 +277,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void new_entry_track() {
-        final Dialog dialog = new Dialog(com.project.womensecurityapp.Main2Activity.this);
+        final Dialog dialog = new Dialog(Main2Activity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
         dialog.setContentView(R.layout.new_user_track_request_popup);
         dialog.setCancelable(true);
@@ -357,7 +359,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void new_user_info() {
-        final Dialog dialog = new Dialog(com.project.womensecurityapp.Main2Activity.this);
+        final Dialog dialog = new Dialog(Main2Activity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // before
         dialog.setContentView(R.layout.new_user_track_info_popup);
         dialog.setCancelable(true);

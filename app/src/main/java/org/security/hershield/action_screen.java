@@ -58,6 +58,14 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import org.json.JSONArray;
+import org.security.hershield.Location.BackgroundLocationService_Girls;
+import org.security.hershield.Notification.notification_generator;
+import org.security.hershield.Retrofit.ApiClient;
+import org.security.hershield.model.RetrofitModel.PlaceResult;
+import org.security.hershield.model.RetrofitModel.safeLocation;
+import org.security.hershield.model.location_model;
+import org.security.hershield.model.person_details;
+import org.security.hershield.services.foreground_service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,6 +74,9 @@ import java.util.Locale;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static org.security.hershield.MainActivity.editor;
+import static org.security.hershield.MainActivity.preferences;
 
 public class action_screen extends AppCompatActivity implements LocationListener, OnMapReadyCallback {
 
@@ -136,11 +147,11 @@ public class action_screen extends AppCompatActivity implements LocationListener
             @Override
             public void onClick(View view) {
                 // stop Background location service girl
-                Intent intent = new Intent(com.project.womensecurityapp.action_screen.this, BackgroundLocationService_Girls.class);
+                Intent intent = new Intent(action_screen.this, BackgroundLocationService_Girls.class);
                 stopService(intent);
 
                 //stop shake service
-                Intent shakeIntent = new Intent(com.project.womensecurityapp.action_screen.this, foreground_service.class);
+                Intent shakeIntent = new Intent(action_screen.this, foreground_service.class);
                 stopService(shakeIntent);
 
                 DatabaseReference databaseReference2 = FirebaseDatabase.getInstance().getReference().child("Problem_Record")
@@ -216,7 +227,7 @@ public class action_screen extends AppCompatActivity implements LocationListener
 
         Log.d(TAG, "initMap: initialising map");
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_actionScreen);
-        mapFragment.getMapAsync(com.project.womensecurityapp.action_screen.this);
+        mapFragment.getMapAsync(action_screen.this);
     }
 
     @Override
@@ -533,7 +544,7 @@ public class action_screen extends AppCompatActivity implements LocationListener
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
-                com.project.womensecurityapp.action_screen.this.startForegroundService(serviceIntent);
+                action_screen.this.startForegroundService(serviceIntent);
             } else {
                 startService(serviceIntent);
             }
@@ -628,7 +639,7 @@ public class action_screen extends AppCompatActivity implements LocationListener
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                         Log.d(TAG, "uploadProfileCoverPhoto: Successful");
-                        Toast.makeText(com.project.womensecurityapp.action_screen.this, "Image uploaded", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(action_screen.this, "Image uploaded", Toast.LENGTH_SHORT).show();
 
                     }
                 })
@@ -636,7 +647,7 @@ public class action_screen extends AppCompatActivity implements LocationListener
                     @Override
                     public void onFailure(@NonNull Exception e) {
 
-                        Toast.makeText(com.project.womensecurityapp.action_screen.this, "Something wrong happened " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(action_screen.this, "Something wrong happened " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         Log.d(TAG, "uploadImageToFirebase: OnFailure: " + e.getMessage());
                     }
                 });
