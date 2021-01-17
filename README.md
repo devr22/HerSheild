@@ -41,13 +41,13 @@ the App will generate a special notification for those who are near to the woman
   * You can view the images that were clicked by you during the respective problem.
   * You can listen/play the audio that was recorded during the respective problem.
   
-<a href="https://drive.google.com/uc?export=view&id=13Uj_AMHjyCRkGw3MS1Hi2y79kpxpCSvU"><img src="https://drive.google.com/uc?export=view&id=13Uj_AMHjyCRkGw3MS1Hi2y79kpxpCSvU" width="200" height ="400" /> 
+<a href="https://drive.google.com/uc?export=view&id=13Uj_AMHjyCRkGw3MS1Hi2y79kpxpCSvU"><img src="https://drive.google.com/uc?export=view&id=13Uj_AMHjyCRkGw3MS1Hi2y79kpxpCSvU" width="200" height ="400" /> </a>
   
 8. **Trusted Person Page:**  See the list of all trusted persons added by you.
 
 9. **Trusted Person Details:** Enter name, contact, email, address and relation and then click on the add person button to add a new trusted person in your list.
 
-<a href="https://drive.google.com/uc?export=view&id=1ypEWaVPOI7BXXJjraJFxeLfRzt3-jI-h"><img src="https://drive.google.com/uc?export=view&id=1ypEWaVPOI7BXXJjraJFxeLfRzt3-jI-h" width="200" height ="400" /> <a href="https://drive.google.com/uc?export=view&id=1X-8Q9b0a64YUlQaZx1sUbXbzv7oEM3wn"><img src="https://drive.google.com/uc?export=view&id=1X-8Q9b0a64YUlQaZx1sUbXbzv7oEM3wn" width="200" height ="400" /> 
+<a href="https://drive.google.com/uc?export=view&id=1ypEWaVPOI7BXXJjraJFxeLfRzt3-jI-h"><img src="https://drive.google.com/uc?export=view&id=1ypEWaVPOI7BXXJjraJFxeLfRzt3-jI-h" width="200" height ="400" /> <a href="https://drive.google.com/uc?export=view&id=1X-8Q9b0a64YUlQaZx1sUbXbzv7oEM3wn"><img src="https://drive.google.com/uc?export=view&id=1X-8Q9b0a64YUlQaZx1sUbXbzv7oEM3wn" width="200" height ="400" /> </a>
 
 ## Clone and Build Project
 * Run Android Studio and Click on **Get from Version Control**
