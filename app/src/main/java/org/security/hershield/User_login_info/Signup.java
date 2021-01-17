@@ -1,4 +1,4 @@
-package com.project.womensecurityapp.User_login_info;
+package org.security.hershield.User_login_info;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -25,7 +25,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.maps.errors.ApiException;
-import com.project.womensecurityapp.R;
+
+
+import org.security.hershield.R;
 
 import br.com.simplepass.loadingbutton.customViews.CircularProgressButton;
 import me.ibrahimsn.lib.CirclesLoadingView;

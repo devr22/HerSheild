@@ -5,45 +5,44 @@
     android:id="@+id/linear"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightGreen"
     android:orientation="vertical"
-    tools:context=".User_login_info.Signup"
-    android:background="@color/lightGreen">
+    tools:context=".User_login_info.Signup">
 
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:paddingVertical="50dp"
+        android:src="@drawable/security" />
 
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/security"
-            android:id="@+id/logo"
-            android:background="@color/white"
-            android:paddingVertical="50dp"
-            />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="20dp"
-        >
+        android:paddingVertical="20dp">
+
         <TextView
+            android:id="@+id/hola"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hola!"
             android:layout_marginStart="10dp"
-            android:textSize="40sp"
+            android:text="Hola!"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold|italic"
-            android:id="@+id/hola"/>
+            android:textSize="40sp"
+            android:textStyle="bold|italic" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Please login to continue"
             android:layout_below="@+id/hola"
             android:layout_marginStart="10dp"
-            android:textSize="15sp"
+            android:text="Please login to continue"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold|italic"/>
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
     </RelativeLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -104,18 +103,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="-or-"
         android:layout_gravity="center_horizontal"
-        android:textSize="20sp"
+        android:layout_marginVertical="7dp"
+        android:text="-or-"
         android:textColor="@color/black"
-        android:layout_marginVertical="7dp"/>
+        android:textSize="20sp" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_auth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        />
+        android:layout_marginHorizontal="10dp" />
 
 
     <!--Button
